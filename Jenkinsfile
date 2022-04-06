@@ -28,6 +28,7 @@ pipeline {
         stage('Install') {
             steps{  
                  script {
+                    sh "cd /var/lib/jenkins/workspace/credor-fb/Frontend"
                     sh "npm install" 
                 }
             }
