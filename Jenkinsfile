@@ -25,7 +25,6 @@ pipeline {
             }
         }
         // move to path
-        Ng Date time
         stage('jsonfile path') {
              steps{  
                 script {
