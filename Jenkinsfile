@@ -24,12 +24,20 @@ pipeline {
                 checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'a20503ad-5039-4327-b838-da091265f708', url: 'https://github.com/Aswinkumarsivanandam/Credor-updated.git']]])
             }
         }
+        // move to path
+        Ng Date time
+        stage('jsonfile path') {
+             steps{  
+                script {
+                    sh "cd /var/lib/jenkins/workspace/credor-fb/Frontend"
+                 }
+            }
+        }
     // Npm install
         stage('Install') {
             steps{  
                  script {
-                     sh "cd /var/lib/jenkins/workspace/credor-fb/Frontend"{
-                         sh "npm install" }
+                     sh "npm install"
                 }
             }
         }
