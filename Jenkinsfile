@@ -21,7 +21,7 @@ pipeline {
         
         stage('Cloning Git') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'a20503ad-5039-4327-b838-da091265f708', url: 'https://github.com/Aswinkumarsivanandam/cfrontend.git']]])     
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'a20503ad-5039-4327-b838-da091265f708', url: 'https://github.com/Aswinkumarsivanandam/Credor-updated.git']]])
             }
         }
     // Npm install
