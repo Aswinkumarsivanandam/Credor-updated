@@ -53,7 +53,7 @@ pipeline {
         stage('Copying build files') {
             steps{  
                 script {
-                    sh "cp -r /var/lib/jenkins/workspace/credor/dist dockfiles/"
+                    sh "cp -r /var/lib/jenkins/workspace/credor-fb/dist dockfiles/"
                 }
             }
         }
@@ -78,7 +78,7 @@ pipeline {
         stage('Docker Run') {
             steps{  
                 script {
-                    sh "docker build -t credor ."
+                    sh "docker build -t credor-fb ."
                 }
             }
         }
