@@ -55,7 +55,9 @@ pipeline {
         stage('Build') {
              steps{  
                 script {
+                    dir ('/var/lib/jenkins/workspace/credor-fb/Frontend') {
                     sh "ng build"
+                    }
                  }
             }
         }
