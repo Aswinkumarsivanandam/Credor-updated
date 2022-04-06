@@ -35,8 +35,9 @@ pipeline {
     // Npm install
         stage('Install') {
             steps{  
-                 script {
-                     sh "npm install"
+                script {
+                    if (fileExists('/var/lib/jenkins/workspace/credor-fb/Frontend/package.json') {
+                        sh 'npm install'
                 }
             }
         }
